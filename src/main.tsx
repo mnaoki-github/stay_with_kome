@@ -8,6 +8,7 @@ import Index from './pages/index.tsx'
 import About from './pages/about.tsx'
 import News from './pages/news.tsx'
 import Blog from './pages/blog.tsx'
+import BlogArticle  from './component/blogArticle.tsx';
 
 import './index.css'
 
@@ -19,7 +20,7 @@ const router =createBrowserRouter([
     children:[
       {
         index: true,
-        element: <Index /> 
+        element: <Index />, 
       },
       {
         path:'about',
@@ -33,6 +34,13 @@ const router =createBrowserRouter([
         path:'blog',
         element:<Blog />,
       },
+      {
+        path:'blog/:blogId',
+        element:<BlogArticle />,
+        // loader: async ({ params }) => {
+        //   return fetch(`/src/blog/blog${params.blogId}.json`);
+        // },
+      }, 
     ]
   },
 ])
