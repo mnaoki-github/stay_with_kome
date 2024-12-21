@@ -6,8 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: process.env.NODE_ENV === 'development'
   ? './'
-  :process.env.NODE_ENV === 'production'
-  ? '/'
   :'stay_with_kome/' 
   // base: process.env.GITHUB_PAGES
   //   ? '/stay_with_kome/' // レポジトリ名を設定
