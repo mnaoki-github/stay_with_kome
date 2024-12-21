@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: process.env.GITHUB_PAGES
-    ? '/stay_with_kome/' // レポジトリ名を設定
-    : './',
+    // ? '/stay_with_kome/' // レポジトリ名を設定
+    ? './' // レポジトリ名を設定
+    : '/',
 })
