@@ -37,9 +37,7 @@ const router =createBrowserRouter([
       {
         path:'blog/:blogId',
         element:<BlogArticle />,
-        // loader: async () => {
-        //   return fetch(`/blogData/blogData.json`);},
-      }
+      },
     ]
   },
 ])
