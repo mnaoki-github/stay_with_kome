@@ -36,8 +36,8 @@ jobs:
           node-version: 20
           cache: 'npm'
       # GITHUB_PAGES環境変数を設定追加
-      # - name: Set environment for github pages 
-      #   run: echo "GITHUB_PAGES=true" >> $GITHUB_ENV
+      - name: Set environment for github pages 
+        run: echo "GITHUB_PAGES=true" >> $GITHUB_ENV
       - name: Install dependencies
         run: npm ci
       - name: Build
