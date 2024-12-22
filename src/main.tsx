@@ -40,7 +40,12 @@ const router =createBrowserRouter([
       },
     ]
   },
-])
+],
+{
+  // setting for github pages
+  basename:'/stay_with_kome'
+}
+)
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
