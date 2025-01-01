@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import {createBrowserRouter,RouterProvider} from 'react-router'
 
 import App from './App.tsx'
 import ErrorPage from './error/error-page.tsx';
@@ -42,13 +42,26 @@ const router =createBrowserRouter([
   },
 ],
 {
+  // react-router-dom v6 to v7
+  // future: {
+  //   v7_relativeSplatPath: true,
+  //   v7_fetcherPersist: true,
+  //   v7_normalizeFormMethod: true,
+  //   v7_partialHydration: true,
+  //   v7_skipActionErrorRevalidation: true,
+  // },
   // setting for github pages
-  basename:'/stay_with_kome'
-}
+  basename:'/stay_with_kome',
+},
 )
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router}
+      // react-router-dom v6 to v7
+      // future={{
+      //   v7_startTransition: true,
+      // }}
+    />
   </StrictMode>
 )

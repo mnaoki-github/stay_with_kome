@@ -1,5 +1,5 @@
 
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import {jsxBlogData} from '../../public/blogData/blogData'
 import BlogNav from './blog_nav'
 

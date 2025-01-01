@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import {jsxBlogData} from '../../public/blogData/blogData'
 
 
@@ -7,7 +7,7 @@ export default function BlogNav () {
         const blogId:number=Number(blogData.id);
         
         return (
-            <li>
+            <li key={blogId}>
                 <NavLink to={`/blog/${blogId}`}>{blogId}</NavLink>
             </li>
         );
