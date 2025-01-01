@@ -8,7 +8,7 @@ export default function BlogNav () {
         
         return (
             <li key={blogId}>
-                <NavLink to={`/blog/${blogId}`}>{blogId}</NavLink>
+                <NavLink to={`../blog/${blogId}`}>{blogId}</NavLink>
             </li>
         );
     })
